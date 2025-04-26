@@ -1,0 +1,30 @@
+{
+    "identifiedFood": "Citrus leaves, likely from an orange, lemon, or lime tree. The leaves are shown on the branch. One leaf is showing signs of yellowing, possibly due to nutrient deficiency or senescence.",
+    "portionSize": "5 grams (estimated weight of a few leaves)",
+    "recognizedServingSize": "10 grams (small handful of leaves, if consumed as a garnish or tea)",
+    "nutritionFactsPerPortion": {
+        "calories": "1",
+        "protein": "0.1",
+        "carbs": "0.2",
+        "fat": "0.01",
+        "fiber": "0.1",
+        "sugar": "0.1",
+        "sodium": "0",
+        "cholesterol": "0"
+    },
+    "nutritionFactsPer100g": {
+        "calories": "20",
+        "protein": "2",
+        "carbs": "4",
+        "fat": "0.2",
+        "fiber": "2",
+        "sugar": "2",
+        "sodium": "0",
+        "cholesterol": "0"
+    },
+    "additionalNotes": [
+        "Citrus leaves are sometimes used in cooking, especially in Southeast Asian cuisine. They provide a citrusy aroma and flavor.",
+        "Possible allergens should be considered if the consumer has citrus allergies, though reactions to the leaves themselves are rare.",
+        "The food is vegetarian and vegan. It is naturally gluten-free."
+    ]
+}
