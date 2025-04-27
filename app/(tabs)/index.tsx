@@ -1,4 +1,4 @@
-import { View, Text, TouchableOpacity, Image, ScrollView, SafeAreaView, Platform, StatusBar } from 'react-native';
+import { View, Text, TouchableOpacity, ScrollView, SafeAreaView, Platform, StatusBar } from 'react-native';
 import { Stack, Link } from 'expo-router';
 import { LinearGradient } from 'expo-linear-gradient';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
@@ -12,7 +12,7 @@ export default function Home() {
       locations={[0.4, 0.5, 0.6]}
       style={{ flex: 1 }}
     >
-      <SafeAreaView style={{ flex: 1 }}>
+      <SafeAreaView className="flex-1">
         <Stack.Screen 
           options={{ 
             headerShown: false
@@ -20,71 +20,28 @@ export default function Home() {
         />
         
         <ScrollView 
-          style={{ flex: 1 }}
+          className="flex-1"
           contentContainerStyle={{ paddingTop: 20 }}
           showsVerticalScrollIndicator={false}
         >
           {/* Title Section */}
-          <View style={{ 
-            paddingHorizontal: 20,
-            paddingTop: 20,
-            paddingBottom: 10,
-          }}>
-            <Text style={{ 
-              fontSize: 32,
-              fontWeight: '900',
-              color: '#000',
-            }}>
+          <View className="px-5 pt-5 pb-2.5">
+            <Text className="text-3xl text-black" style={{ fontFamily: 'Inter_900Black' }}>
               FoodLens
             </Text>
           </View>
 
           {/* Hero Section */}
-          <View style={{ 
-            padding: 20,
-            alignItems: 'center',
-            paddingBottom: 60,
-          }}>
-            <Text style={{ 
-              fontSize: 32,
-              fontWeight: 'bold',
-              color: '#000',
-              marginBottom: 10,
-              textAlign: 'center'
-            }}>
+          <View className="p-5 items-center pb-[60px]">
+            <Text className="text-3xl text-black mb-2.5 text-center" style={{ fontFamily: 'Inter_700Bold' }}>
               Smart Food Analysis
             </Text>
-            <Text style={{ 
-              fontSize: 18,
-              color: '#333',
-              textAlign: 'center',
-              marginBottom: 30,
-              paddingHorizontal: 20,
-            }}>
+            <Text className="text-lg text-gray-700 text-center mb-8 px-5" style={{ fontFamily: 'Inter_400Regular' }}>
               Get instant nutritional information from your food photos using AI
             </Text>
             <Link href="/analyze" asChild>
-              <TouchableOpacity
-                style={{
-                  backgroundColor: '#03080A',
-                  paddingVertical: 16,
-                  paddingHorizontal: 32,
-                  borderRadius: 30,
-                  flexDirection: 'row',
-                  alignItems: 'center',
-                  gap: 8,
-                  shadowColor: '#000',
-                  shadowOffset: { width: 0, height: 2 },
-                  shadowOpacity: 0.1,
-                  shadowRadius: 8,
-                  elevation: 5,
-                }}>
-                <Text style={{ 
-                  color: 'white',
-                  fontSize: 18,
-                  fontWeight: '600',
-                  marginRight: 10,
-                }}>
+              <TouchableOpacity className="bg-[#03080A] py-4 px-8 rounded-full flex-row items-center gap-2 shadow-lg">
+                <Text className="text-white text-lg mr-2.5" style={{ fontFamily: 'Inter_600SemiBold' }}>
                   Analyze Food
                 </Text>
                 <MaterialCommunityIcons name="scan-helper" size={20} color="white" />
@@ -93,19 +50,13 @@ export default function Home() {
           </View>
 
           {/* Features Section */}
-          <View style={{ padding: 20 }}>
-            <Text style={{ 
-              fontSize: 24,
-              fontWeight: '600',
-              marginBottom: 20,
-              textAlign: 'center',
-              color: '#000'
-            }}>
+          <View className="p-5">
+            <Text className="text-2xl mb-5 text-center text-black" style={{ fontFamily: 'Inter_600SemiBold' }}>
               Features
             </Text>
             
             {/* Feature Cards */}
-            <View style={{ gap: 15 }}>
+            <View className="gap-4">
               {[
                 {
                   title: 'Instant Analysis',
@@ -130,33 +81,14 @@ export default function Home() {
               ].map((feature, index) => (
                 <View
                   key={index}
-                  style={{
-                    backgroundColor: 'rgba(255, 255, 255, 0.9)',
-                    padding: 20,
-                    borderRadius: 15,
-                    flexDirection: 'row',
-                    alignItems: 'center',
-                    gap: 15,
-                    shadowColor: '#000',
-                    shadowOffset: { width: 0, height: 2 },
-                    shadowOpacity: 0.1,
-                    shadowRadius: 8,
-                    elevation: 5,
-                  }}>
-                  <Text style={{ fontSize: 40 }}>{feature.icon}</Text>
-                  <View style={{ flex: 1 }}>
-                    <Text style={{ 
-                      fontSize: 18,
-                      fontWeight: '600',
-                      marginBottom: 5,
-                      color: '#000'
-                    }}>
+                  className="bg-white/90 p-5 rounded-2xl flex-row items-center gap-4 shadow-md mb-3"
+                >
+                  <Text className="text-4xl">{feature.icon}</Text>
+                  <View className="flex-1">
+                    <Text className="text-lg mb-1 text-black" style={{ fontFamily: 'Inter_600SemiBold' }}>
                       {feature.title}
                     </Text>
-                    <Text style={{ 
-                      color: '#333',
-                      lineHeight: 20,
-                    }}>
+                    <Text className="text-gray-700 leading-5" style={{ fontFamily: 'Inter_400Regular' }}>
                       {feature.description}
                     </Text>
                   </View>
@@ -164,9 +96,6 @@ export default function Home() {
               ))}
             </View>
           </View>
-
-          {/* Footer */}
-          
         </ScrollView>
       </SafeAreaView>
     </LinearGradient>

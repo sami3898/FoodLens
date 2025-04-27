@@ -247,7 +247,7 @@ const styles = StyleSheet.create({
   uploadButtonText: {
     color: 'white',
     fontSize: 16,
-    fontWeight: '600',
+    fontFamily: 'Inter_600SemiBold',
   },
   bottomControls: {
     flexDirection: 'row',
@@ -283,6 +283,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     textAlign: 'center',
     marginHorizontal: 20,
+    fontFamily: 'Inter_400Regular',
   },
   button: {
     backgroundColor: '#7fff6c',
@@ -296,7 +297,7 @@ const styles = StyleSheet.create({
   buttonText: {
     color: 'black',
     fontSize: 16,
-    fontWeight: '600',
+    fontFamily: 'Inter_600SemiBold',
   },
   preview: {
     flex: 1,
@@ -323,5 +324,6 @@ const styles = StyleSheet.create({
   analysisText: {
     color: 'white',
     fontSize: 14,
+    fontFamily: 'Inter_400Regular',
   },
 }); 
